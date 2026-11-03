@@ -9,12 +9,32 @@ defmodule Lector do
       |> Stream.map(fn {num, texto} -> {num, texto, Tramo.parse({num, texto})} end) # Convierte con el parse
       |> Enum.split_with(fn {_, _, resultado} -> match?({:ok, _}, resultado) end) # aqui ejecuta todo
 
-      tramos = Enum.map(bueno, fn {_, _, {:ok, tramo}} -> tramo end)
-      errores = Enum.map(malos, fn {_, _, {:error, motivo}} -> {num,texto, motivo} end)
+      tramos = Enum.map(buenos, fn {_, _, {:ok, tramo}} -> tramo end)
+      errores = Enum.map(malos, fn {num, texto, {:error, motivo}} -> {num, texto, motivo} end)
 
       {:ok, tramos, errores}
     else
-      {error, "no se encontro el archivo requerido"}
+      {:error, "no se encontro el archivo requerido: #{ruta}"}
+    end
+  end
+
+  # Igual que leer_tramos pero cada linea se convierte con Consulta.parse
+  def leer_consultas(ruta) do
+    if File.exists?(ruta) do
+      {buenas, malas} = ruta
+      |> File.stream!()
+      |> Stream.with_index(1)
+      |> Stream.map(fn {texto, num} -> {num, String.trim(texto)} end)
+      |> Stream.reject(fn {_num, texto} -> ignorar?(texto) end)
+      |> Stream.map(fn {num, texto} -> {num, texto, Consulta.parse({num, texto})} end)
+      |> Enum.split_with(fn {_, _, resultado} -> match?({:ok, _}, resultado) end)
+
+      consultas = Enum.map(buenas, fn {_, _, {:ok, consulta}} -> consulta end)
+      errores = Enum.map(malas, fn {num, texto, {:error, motivo}} -> {num, texto, motivo} end)
+
+      {:ok, consultas, errores}
+    else
+      {:error, "no se encontro el archivo requerido: #{ruta}"}
     end
   end
 
