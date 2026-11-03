@@ -1,0 +1,5 @@
+# Caso limite: origen igual al destino y centro que solo aparece en un bucle descartado
+A,B
+B,A
+A,A
+A,C

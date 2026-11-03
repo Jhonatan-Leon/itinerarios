@@ -1,0 +1,9 @@
+# Caso limite: solo bucles, repetidos y direcciones contrarias
+
+  # comentario con espacios antes del numeral
+A,A,2,1
+A,B,1,1
+A,B,1,1
+A,B,9,7
+B,A,1,1
+B,B,3,3

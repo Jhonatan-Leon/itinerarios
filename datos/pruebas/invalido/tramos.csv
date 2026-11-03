@@ -1,0 +1,12 @@
+# Caso invalido: lineas mal escritas mezcladas con buenas
+A,B,8,5
+B,D,7,4
+A,C,abc,2
+C,D,12
+B,C,3,2,9
+,B,4,1
+C,,4,1
+A,D,0,3
+D,A,5,-2
+B,E,5.5,1
+C,B,4,1

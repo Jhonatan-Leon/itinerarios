@@ -1,0 +1,7 @@
+# Caso invalido: consultas mal escritas y centros que no existen
+A,D
+A,Z
+X,Y
+A
+A,D,C
+,D
