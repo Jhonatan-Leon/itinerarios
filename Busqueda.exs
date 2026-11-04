@@ -1,4 +1,4 @@
-Code.require_file("Itinerarios.exs", __DIR__)
+Code.require_file("Itinerario.exs", __DIR__)
 Code.require_file("Utilidades.exs", __DIR__)
 
 defmodule Busqueda do
