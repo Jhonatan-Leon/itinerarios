@@ -8,7 +8,7 @@ defmodule Depuracion do
 
   defp depurar([t | resto], vistos, buenos, descartes) do #Cuando aun hay que revisar elementos de la pila se ejecuta este caso de trabajo
     cond do
-      t.origen == t.destino -> #pregunta que si el tramo sale y llega al mismo lugar 
+      t.origen == t.destino -> #pregunta que si el tramo sale y llega al mismo lugar
         depurar(resto, vistos, buenos, [{t, "bucle: sale y llega al mismo centro"} | descartes]) #En caso de un bucle sigue con las otras tarjetas y lo manda a descartes
 
       Map.has_key?(vistos, {t.origen, t.destino}) -> #aca pregunta que si ya anoto la pareja en la libreta
