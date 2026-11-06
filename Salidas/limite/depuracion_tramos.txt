@@ -1,0 +1,4 @@
+Línea 4: A,A,2,1 -> bucle: sale y llega al mismo centro
+Línea 6: A,B,1,1 -> tramo repetido en la misma dirección
+Línea 7: A,B,9,7 -> tramo repetido en la misma dirección
+Línea 9: B,B,3,3 -> bucle: sale y llega al mismo centro

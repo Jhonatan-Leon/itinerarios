@@ -42,15 +42,3 @@ defmodule Lector do
   defp ignorar?("#" <> _), do: true # ignora los comentarios
   defp ignorar?(_), do: false # deja pasar todo lo demas
 end
-
-
-# BORRAR ESTO DESPUES, EJEMPLO DE COMO USAR
-
-case Lector.leer_tramos("datos/tramos.csv") do
-  {:ok, tramos, errores} ->
-    # tramos va a la depuración
-    IO.puts("Tramos válidos: #{length(tramos)}, con error: #{length(errores)}")
-
-  {:error, mensaje} ->
-    IO.puts(mensaje)   # avisa y no revienta
-end

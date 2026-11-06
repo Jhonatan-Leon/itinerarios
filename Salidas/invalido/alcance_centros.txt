@@ -1,0 +1,13 @@
+=== A → D ===
+Paso 0: {A}
+Paso 1: {A, B}
+Paso 2: {A, B, D}
+Se estabiliza en el paso 2 (el paso 3 repite el estado)
+Destino alcanzable
+
+=== A → Z ===
+No se calcula el alcance: el centro Z no existe en la red
+
+=== X → Y ===
+No se calcula el alcance: los centros X y Y no existen en la red
+

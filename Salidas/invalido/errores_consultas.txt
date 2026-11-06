@@ -1,0 +1,3 @@
+Línea 5: A -> Se esperaban 2 campos: Origen, Destino
+Línea 6: A,D,C -> Se esperaban 2 campos: Origen, Destino
+Línea 7: ,D -> El origen y el destino no pueden estar vacios

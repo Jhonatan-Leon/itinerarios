@@ -1,0 +1,21 @@
+=== A → B ===
+Paso 0: {A}
+Paso 1: {A, B}
+Se estabiliza en el paso 1 (el paso 2 repite el estado)
+Destino alcanzable
+
+=== B → A ===
+Paso 0: {B}
+Paso 1: {A, B}
+Se estabiliza en el paso 1 (el paso 2 repite el estado)
+Destino alcanzable
+
+=== A → A ===
+Paso 0: {A}
+Paso 1: {A, B}
+Se estabiliza en el paso 1 (el paso 2 repite el estado)
+Destino alcanzable
+
+=== A → C ===
+No se calcula el alcance: el centro C no existe en la red
+

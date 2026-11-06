@@ -1,0 +1,13 @@
+=== A → D ===
+Itinerario 1: A → B → D | tramos: 2 | 15 min | costo: 9
+Total: 1 itinerario
+Menos tramos: 1
+Menor tiempo: 1
+Menor costo: 1
+
+=== A → Z ===
+No se inicia la búsqueda: el centro Z no existe en la red
+
+=== X → Y ===
+No se inicia la búsqueda: los centros X y Y no existen en la red
+
